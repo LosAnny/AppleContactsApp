@@ -36,7 +36,7 @@ class TabBarController: UITabBarController {
             createNavigationController(for: ViewController(),
                                        title: "Недавние",
                                        image: "clock.fill"),
-            createNavigationController(for: ViewController(),
+            createNavigationController(for: ContactListVC(),
                                        title: "Контакты",
                                        image: "person.crop.circle.fill"),
             createNavigationController(for: ViewController(),
