@@ -10,7 +10,6 @@
 		94B55B8228EC1C8A00A018FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55B8128EC1C8A00A018FE /* AppDelegate.swift */; };
 		94B55B8428EC1C8A00A018FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55B8328EC1C8A00A018FE /* SceneDelegate.swift */; };
 		94B55B8628EC1C8A00A018FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55B8528EC1C8A00A018FE /* ViewController.swift */; };
-		94B55B8928EC1C8A00A018FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B55B8728EC1C8A00A018FE /* Main.storyboard */; };
 		94B55B8B28EC1C8A00A018FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B55B8A28EC1C8A00A018FE /* Assets.xcassets */; };
 		94B55B8E28EC1C8A00A018FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B55B8C28EC1C8A00A018FE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		94B55B8128EC1C8A00A018FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B55B8328EC1C8A00A018FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94B55B8528EC1C8A00A018FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		94B55B8828EC1C8A00A018FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94B55B8A28EC1C8A00A018FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94B55B8D28EC1C8A00A018FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94B55B8F28EC1C8A00A018FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,70 @@
 		94B55B8028EC1C8A00A018FE /* AppleContactsApp */ = {
 			isa = PBXGroup;
 			children = (
-				94B55B8128EC1C8A00A018FE /* AppDelegate.swift */,
-				94B55B8328EC1C8A00A018FE /* SceneDelegate.swift */,
-				94B55B8528EC1C8A00A018FE /* ViewController.swift */,
-				94B55B8728EC1C8A00A018FE /* Main.storyboard */,
-				94B55B8A28EC1C8A00A018FE /* Assets.xcassets */,
-				94B55B8C28EC1C8A00A018FE /* LaunchScreen.storyboard */,
-				94B55B8F28EC1C8A00A018FE /* Info.plist */,
+				94B55B9628EC1DB900A018FE /* Sources */,
+				94B55B9528EC1DB100A018FE /* Resources */,
 			);
 			path = AppleContactsApp;
+			sourceTree = "<group>";
+		};
+		94B55B9528EC1DB100A018FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94B55B8C28EC1C8A00A018FE /* LaunchScreen.storyboard */,
+				94B55B8A28EC1C8A00A018FE /* Assets.xcassets */,
+				94B55B8F28EC1C8A00A018FE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		94B55B9628EC1DB900A018FE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				94B55B9828EC1DDA00A018FE /* App */,
+				94B55B9728EC1DD500A018FE /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		94B55B9728EC1DD500A018FE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				94B55B9B28EC1DF300A018FE /* Models */,
+				94B55B9A28EC1DEE00A018FE /* Views */,
+				94B55B9928EC1DE700A018FE /* Controllers */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		94B55B9828EC1DDA00A018FE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				94B55B8328EC1C8A00A018FE /* SceneDelegate.swift */,
+				94B55B8128EC1C8A00A018FE /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		94B55B9928EC1DE700A018FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				94B55B8528EC1C8A00A018FE /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		94B55B9A28EC1DEE00A018FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		94B55B9B28EC1DF300A018FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +180,6 @@
 			files = (
 				94B55B8E28EC1C8A00A018FE /* LaunchScreen.storyboard in Resources */,
 				94B55B8B28EC1C8A00A018FE /* Assets.xcassets in Resources */,
-				94B55B8928EC1C8A00A018FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +199,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		94B55B8728EC1C8A00A018FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94B55B8828EC1C8A00A018FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		94B55B8C28EC1C8A00A018FE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,12 +333,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUYZ999FPK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppleContactsApp/Info.plist;
+				INFOPLIST_FILE = AppleContactsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +349,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +362,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RUYZ999FPK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppleContactsApp/Info.plist;
+				INFOPLIST_FILE = AppleContactsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +378,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
