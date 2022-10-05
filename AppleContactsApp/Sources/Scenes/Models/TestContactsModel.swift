@@ -12,7 +12,7 @@ final class TestContactsModel {
     static func createModel() -> [Contact] {
         return [
             Contact(firstName: "Алена", secondName: "Есенина", phoneNumber: [89346573412]),
-            Contact(firstName: "Алена Маникюр", secondName: "Петрова", phoneNumber: [89346574891]),
+            Contact(profileImage: "nail", firstName: "Алена Маникюр", secondName: "Петрова", isElected: true, phoneNumber: [89346574891]),
             Contact(firstName: "Алина Васильевна", secondName: "Есенина", phoneNumber: [89346573412]),
             Contact(firstName: "Анна", secondName: "Петрова", phoneNumber: [89346574592]),
             Contact(firstName: "Артем", phoneNumber: [89346571122]),
@@ -34,7 +34,7 @@ final class TestContactsModel {
             Contact(firstName: "Кирилл", phoneNumber: [89340983400]),
             Contact(firstName: "Лена", phoneNumber: [89346099012]),
             Contact(firstName: "Леша", phoneNumber: [89346007712]),
-            Contact(firstName: "Мама Теле2", isElected: true, phoneNumber: [89321573412]),
+            Contact(profileImage: "mother", firstName: "Мама Теле2", isElected: true, phoneNumber: [89321573412]),
             Contact(firstName: "Мама мтс", isElected: true, phoneNumber: [85234513412]),
             Contact(firstName: "Миша", phoneNumber: [89321576544]),
             Contact(firstName: "Маша", phoneNumber: [89921576512]),

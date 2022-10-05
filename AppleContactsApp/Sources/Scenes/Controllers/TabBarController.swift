@@ -31,7 +31,7 @@ class TabBarController: UITabBarController {
     private func setupViewControllers() {
         
         viewControllers = [
-            createNavigationController(for: ViewController(),
+            createNavigationController(for: FavoritesContactListVC(),
                                        title: "Избранное",
                                        image: "star.fill"),
             createNavigationController(for: ViewController(),

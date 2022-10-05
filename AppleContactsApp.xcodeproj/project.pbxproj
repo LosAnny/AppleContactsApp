@@ -18,6 +18,9 @@
 		94B55BA328EC239100A018FE /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA228EC239100A018FE /* ContactListView.swift */; };
 		94B55BA528EC244800A018FE /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA428EC244800A018FE /* ContactListVC.swift */; };
 		94B55BA728ED9DEE00A018FE /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */; };
+		94B55BAA28EDAB1100A018FE /* FavoritesContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA928EDAB1100A018FE /* FavoritesContactListView.swift */; };
+		94B55BAC28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BAB28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift */; };
+		94B55BAE28EDAD2200A018FE /* FavoritesContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BAD28EDAD2200A018FE /* FavoritesContactListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		94B55BA228EC239100A018FE /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		94B55BA428EC244800A018FE /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
 		94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		94B55BA928EDAB1100A018FE /* FavoritesContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesContactListView.swift; sourceTree = "<group>"; };
+		94B55BAB28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesContactTableViewCell.swift; sourceTree = "<group>"; };
+		94B55BAD28EDAD2200A018FE /* FavoritesContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesContactListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 				94B55B8528EC1C8A00A018FE /* ViewController.swift */,
 				94B55B9C28EC206B00A018FE /* TabBarController.swift */,
 				94B55BA428EC244800A018FE /* ContactListVC.swift */,
+				94B55BAD28EDAD2200A018FE /* FavoritesContactListVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				94B55BA228EC239100A018FE /* ContactListView.swift */,
+				94B55BA928EDAB1100A018FE /* FavoritesContactListView.swift */,
 				94B55BA828EDA24200A018FE /* Cells */,
 			);
 			path = Views;
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */,
+				94B55BAB28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -221,10 +230,13 @@
 				94B55B8628EC1C8A00A018FE /* ViewController.swift in Sources */,
 				94B55B9D28EC206B00A018FE /* TabBarController.swift in Sources */,
 				94B55B9F28EC22B300A018FE /* Contact.swift in Sources */,
+				94B55BAC28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift in Sources */,
 				94B55B8228EC1C8A00A018FE /* AppDelegate.swift in Sources */,
+				94B55BAE28EDAD2200A018FE /* FavoritesContactListVC.swift in Sources */,
 				94B55BA728ED9DEE00A018FE /* ContactTableViewCell.swift in Sources */,
 				94B55B8428EC1C8A00A018FE /* SceneDelegate.swift in Sources */,
 				94B55BA528EC244800A018FE /* ContactListVC.swift in Sources */,
+				94B55BAA28EDAB1100A018FE /* FavoritesContactListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
