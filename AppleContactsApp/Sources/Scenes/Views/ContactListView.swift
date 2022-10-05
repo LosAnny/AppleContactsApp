@@ -14,7 +14,8 @@ class ContactListView: UIView {
     lazy var tableView: UITableView = {
         let tableView  = UITableView(frame: .zero, style: .plain)
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "contactsListCell")
+        tableView.backgroundColor = .white
+        tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: ContactTableViewCell.identifier)
         
         return tableView
     }()
@@ -32,7 +33,7 @@ class ContactListView: UIView {
     }
         
     private func commonInit() {
-        backgroundColor = .black
+        backgroundColor = .white
         
         setupHierarchy()
         setupLayouts()

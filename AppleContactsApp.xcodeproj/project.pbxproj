@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				94B55BA228EC239100A018FE /* ContactListView.swift */,
-				94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */,
+				94B55BA828EDA24200A018FE /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +136,14 @@
 				94B55BA028EC230000A018FE /* TestContactsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		94B55BA828EDA24200A018FE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
