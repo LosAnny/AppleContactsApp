@@ -17,6 +17,7 @@
 		94B55BA128EC230000A018FE /* TestContactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA028EC230000A018FE /* TestContactsModel.swift */; };
 		94B55BA328EC239100A018FE /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA228EC239100A018FE /* ContactListView.swift */; };
 		94B55BA528EC244800A018FE /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA428EC244800A018FE /* ContactListVC.swift */; };
+		94B55BA728ED9DEE00A018FE /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		94B55BA028EC230000A018FE /* TestContactsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContactsModel.swift; sourceTree = "<group>"; };
 		94B55BA228EC239100A018FE /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		94B55BA428EC244800A018FE /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
+		94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				94B55BA228EC239100A018FE /* ContactListView.swift */,
+				94B55BA628ED9DEE00A018FE /* ContactTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				94B55B9D28EC206B00A018FE /* TabBarController.swift in Sources */,
 				94B55B9F28EC22B300A018FE /* Contact.swift in Sources */,
 				94B55B8228EC1C8A00A018FE /* AppDelegate.swift in Sources */,
+				94B55BA728ED9DEE00A018FE /* ContactTableViewCell.swift in Sources */,
 				94B55B8428EC1C8A00A018FE /* SceneDelegate.swift in Sources */,
 				94B55BA528EC244800A018FE /* ContactListVC.swift in Sources */,
 			);
