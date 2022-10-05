@@ -44,8 +44,22 @@ class ContactListVC: UIViewController {
     }
     
     private func setupNavigationController() {
-         navigationController?.navigationBar.prefersLargeTitles = true
-         navigationItem.title = "Контакты"
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Контакты"
+        navigationItem.searchController = setupSearchController()
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    private func setupSearchController() -> UISearchController {
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.searchBar.placeholder = "Поиск"
+        searchController.searchBar.setValue("Отменить", forKey: "cancelButtonText")
+
+        return searchController
     }
     
     func configureDictionaryWithContacts() {
@@ -71,7 +85,7 @@ class ContactListVC: UIViewController {
 extension ContactListVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        sectionTitles.count
+        return sectionTitles.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -85,10 +99,11 @@ extension ContactListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactsListCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactTableViewCell") as! ContactTableViewCell
+
         let contactKey = sectionTitles[indexPath.section]
         if let contactValues = contactsDictionary[contactKey] {
-            cell.textLabel?.text = contactValues[indexPath.row].firstName
+            cell.setupView(with: contactValues[indexPath.row])
         }
         
         return cell
@@ -96,7 +111,8 @@ extension ContactListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    titleForHeaderInSection section: Int) -> String? {
-        sectionTitles[section]
+        
+        return sectionTitles[section]
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
