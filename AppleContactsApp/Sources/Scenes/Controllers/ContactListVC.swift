@@ -39,7 +39,7 @@ class ContactListVC: UIViewController {
     // MARK: - Setup
     
     private func configureView() {
-        //contactsView?.tableView.delegate = self
+        contactsView?.tableView.delegate = self
         contactsView?.tableView.dataSource = self
     }
     
@@ -117,5 +117,18 @@ extension ContactListVC: UITableViewDataSource {
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return sectionTitles
+    }
+}
+
+//MARK: - Extension with UITableViewDelegate
+
+extension ContactListVC: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let contact = contactsDictionary[sectionTitles[indexPath.section]]?[indexPath.row] ?? Contact(firstName: "OOOOOPS")
+        let controller = DetailContactVC(contact: contact)
+        navigationController?.pushViewController(controller, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
