@@ -35,6 +35,13 @@ class DetailContactView: UIView {
         return label
     }()
     
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        
+        return scrollView
+    }()
+    
     private lazy var stackForMainButton = createHorizontalStackView(distribution: .fillEqually, spacing: 10)
     
     private lazy var messageMainButton = createMainButton(imageName: "message.fill", text: "написать")
@@ -90,7 +97,9 @@ class DetailContactView: UIView {
         stackForMainButton.addArrangedSubview(videoMainButton)
         stackForMainButton.addArrangedSubview(envelopeMainButton)
         
-        addSubview(mainStack)
+        addSubview(scrollView)
+        scrollView.addSubview(mainStack)
+        
         mainStack.addArrangedSubview(buttonForNumber)
         mainStack.addArrangedSubview(buttonForNotes)
         
@@ -106,7 +115,7 @@ class DetailContactView: UIView {
         
     private func setupLayouts() {
         contactImageView.translatesAutoresizingMaskIntoConstraints = false
-        contactImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
+        contactImageView.topAnchor.constraint(equalTo: topAnchor, constant: 60).isActive = true
         contactImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         contactImageView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width / 4).isActive = true
         contactImageView.heightAnchor.constraint(equalTo: contactImageView.widthAnchor).isActive = true
@@ -121,10 +130,18 @@ class DetailContactView: UIView {
         stackForMainButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
         stackForMainButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
         
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: stackForMainButton.bottomAnchor, constant: 20).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
         mainStack.translatesAutoresizingMaskIntoConstraints = false
-        mainStack.topAnchor.constraint(equalTo: stackForMainButton.bottomAnchor, constant: 20).isActive = true
-        mainStack.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10).isActive = true
-        mainStack.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10).isActive = true
+        mainStack.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        mainStack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+        mainStack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        mainStack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -10).isActive = true
+        mainStack.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
     }
     
     // MARK: - Private functions for create UI
@@ -141,7 +158,8 @@ class DetailContactView: UIView {
     private func createVerticalStackView(spacing: Int, color: UIColor?) -> UIStackView {
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.distribution = .equalSpacing
+        stack.distribution = .fillProportionally
+        stack.alignment = .fill
         stack.spacing = CGFloat(spacing)
         if let color = color {
             stack.backgroundColor = color
