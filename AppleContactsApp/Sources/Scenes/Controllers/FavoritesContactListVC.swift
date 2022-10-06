@@ -38,7 +38,7 @@ class FavoritesContactListVC: UIViewController {
     // MARK: - Setup
     
     private func configureView() {
-        //contactsView?.tableView.delegate = self
+        contactsView?.tableView.delegate = self
         contactsView?.tableView.dataSource = self
     }
     
@@ -77,3 +77,14 @@ extension FavoritesContactListVC: UITableViewDataSource {
     }
 }
 
+//MARK: - Extension with UITableViewDelegate
+
+extension FavoritesContactListVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let contact = filteredModel[indexPath.row]
+        let controller = DetailContactVC(contact: contact)
+        navigationController?.pushViewController(controller, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
