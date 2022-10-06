@@ -21,6 +21,8 @@
 		94B55BAA28EDAB1100A018FE /* FavoritesContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BA928EDAB1100A018FE /* FavoritesContactListView.swift */; };
 		94B55BAC28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BAB28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift */; };
 		94B55BAE28EDAD2200A018FE /* FavoritesContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BAD28EDAD2200A018FE /* FavoritesContactListVC.swift */; };
+		94B55BB128EDFD6A00A018FE /* DetailContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BB028EDFD6A00A018FE /* DetailContactView.swift */; };
+		94B55BB528EDFE8100A018FE /* DetailContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B55BB428EDFE8100A018FE /* DetailContactVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		94B55BA928EDAB1100A018FE /* FavoritesContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesContactListView.swift; sourceTree = "<group>"; };
 		94B55BAB28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesContactTableViewCell.swift; sourceTree = "<group>"; };
 		94B55BAD28EDAD2200A018FE /* FavoritesContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesContactListVC.swift; sourceTree = "<group>"; };
+		94B55BB028EDFD6A00A018FE /* DetailContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactView.swift; sourceTree = "<group>"; };
+		94B55BB428EDFE8100A018FE /* DetailContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				94B55B9C28EC206B00A018FE /* TabBarController.swift */,
 				94B55BA428EC244800A018FE /* ContactListVC.swift */,
 				94B55BAD28EDAD2200A018FE /* FavoritesContactListVC.swift */,
+				94B55BB428EDFE8100A018FE /* DetailContactVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				94B55BA228EC239100A018FE /* ContactListView.swift */,
 				94B55BA928EDAB1100A018FE /* FavoritesContactListView.swift */,
+				94B55BB028EDFD6A00A018FE /* DetailContactView.swift */,
 				94B55BA828EDA24200A018FE /* Cells */,
 			);
 			path = Views;
@@ -228,10 +234,12 @@
 				94B55BA128EC230000A018FE /* TestContactsModel.swift in Sources */,
 				94B55BA328EC239100A018FE /* ContactListView.swift in Sources */,
 				94B55B8628EC1C8A00A018FE /* ViewController.swift in Sources */,
+				94B55BB128EDFD6A00A018FE /* DetailContactView.swift in Sources */,
 				94B55B9D28EC206B00A018FE /* TabBarController.swift in Sources */,
 				94B55B9F28EC22B300A018FE /* Contact.swift in Sources */,
 				94B55BAC28EDAB3B00A018FE /* FavoritesContactTableViewCell.swift in Sources */,
 				94B55B8228EC1C8A00A018FE /* AppDelegate.swift in Sources */,
+				94B55BB528EDFE8100A018FE /* DetailContactVC.swift in Sources */,
 				94B55BAE28EDAD2200A018FE /* FavoritesContactListVC.swift in Sources */,
 				94B55BA728ED9DEE00A018FE /* ContactTableViewCell.swift in Sources */,
 				94B55B8428EC1C8A00A018FE /* SceneDelegate.swift in Sources */,

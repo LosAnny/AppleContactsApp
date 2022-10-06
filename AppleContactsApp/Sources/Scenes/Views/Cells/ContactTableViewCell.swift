@@ -19,6 +19,7 @@ class ContactTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .white
         contentView.tintColor = .black
+        selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {
