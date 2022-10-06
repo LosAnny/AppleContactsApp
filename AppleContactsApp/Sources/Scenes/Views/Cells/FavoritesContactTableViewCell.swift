@@ -43,6 +43,7 @@ class FavoritesContactTableViewCell: UITableViewCell {
         
         contentView.backgroundColor = .white
         contentView.tintColor = .black
+        selectionStyle = .none
         accessoryType = .detailButton
         
         setupHierarchy()
