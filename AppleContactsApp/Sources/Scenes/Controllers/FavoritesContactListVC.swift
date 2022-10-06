@@ -46,6 +46,9 @@ class FavoritesContactListVC: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Избранные"
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Править", style: .plain, target: self, action: nil)
     }
     
     // MARK: - Private functions
