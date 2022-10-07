@@ -11,7 +11,7 @@ class FavoritesContactListVC: UIViewController {
     
     //MARK: - Elements
     
-    private var contactsView: FavoritesContactListView? {
+    var contactsView: FavoritesContactListView? {
         guard isViewLoaded else { return nil }
         return view as? FavoritesContactListView
     }
@@ -38,7 +38,7 @@ class FavoritesContactListVC: UIViewController {
     // MARK: - Setup
     
     private func configureView() {
-        //contactsView?.tableView.delegate = self
+        contactsView?.tableView.delegate = self
         contactsView?.tableView.dataSource = self
     }
     
@@ -46,11 +46,15 @@ class FavoritesContactListVC: UIViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Избранные"
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Править", style: .plain, target: self, action: nil)
     }
     
     // MARK: - Private functions
     
     private func filterForFavouriteContact() {
+        filteredModel = [Contact]()
         for contact in model {
             if contact.isElected {
                 filteredModel.append(contact)
@@ -65,7 +69,7 @@ extension FavoritesContactListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        filteredModel.count
+        return filteredModel.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -77,3 +81,25 @@ extension FavoritesContactListVC: UITableViewDataSource {
     }
 }
 
+//MARK: - Extension with UITableViewDelegate
+
+extension FavoritesContactListVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let contact = filteredModel[indexPath.row]
+        let controller = CallVC(contact: contact)
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let contact = filteredModel[indexPath.row]
+        let controller = DetailContactVC(contact: contact)
+        
+        navigationController?.pushViewController(controller, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}

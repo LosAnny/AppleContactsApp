@@ -231,6 +231,12 @@ class DetailContactView: UIView {
         return button
     }
     
+    // MARK: - Actions
+    
+    func addAnotherMainButtonTarget(_ target: Any?, action: Selector) {
+        anotherMainButton.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
     // MARK: - Public Methods
     
     func setupView(with model: Contact) {

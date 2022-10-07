@@ -49,6 +49,9 @@ class ContactListVC: UIViewController {
         navigationItem.title = "Контакты"
         navigationItem.searchController = setupSearchController()
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Группы", style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
     }
     
     private func setupSearchController() -> UISearchController {

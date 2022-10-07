@@ -1,21 +1,21 @@
 //
-//  DetailContactVC.swift
+//  CallVC.swift
 //  AppleContactsApp
 //
-//  Created by Анна Лошакова on 05.10.2022.
+//  Created by Анна Лошакова on 06.10.2022.
 //
 
 import UIKit
 
-class DetailContactVC: UIViewController {
-    
+class CallVC: UIViewController {
+
     //MARK: - Elements
     
     private let contact: Contact
     
-    private var detailContactView: DetailContactView? {
+    private var callView: CallView? {
         guard isViewLoaded else { return nil }
-        return view as? DetailContactView
+        return view as? CallView
     }
     
     // MARK: - Initialization
@@ -32,21 +32,19 @@ class DetailContactVC: UIViewController {
     // MARK: - Lifecycle
     
     override func loadView() {
-        self.view = DetailContactView()
+        self.view = CallView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        detailContactView?.setupView(with: contact)
-        detailContactView?.addAnotherMainButtonTarget(self, action: #selector(openCallVC))
+        callView?.setupView(with: contact)
+        callView?.addDownPhoneButtonTarget(self, action: #selector(dismissVC))
     }
     
     // MARK: - Objc func
     
-    @objc func openCallVC() {
-        let controller = CallVC(contact: contact)
-        controller.modalPresentationStyle = .fullScreen
-        present(controller, animated: true)
+    @objc func dismissVC() {
+        dismiss(animated: true)
     }
 }
