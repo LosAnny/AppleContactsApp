@@ -11,7 +11,7 @@ class FavoritesContactListVC: UIViewController {
     
     //MARK: - Elements
     
-    private var contactsView: FavoritesContactListView? {
+    var contactsView: FavoritesContactListView? {
         guard isViewLoaded else { return nil }
         return view as? FavoritesContactListView
     }
@@ -37,6 +37,13 @@ class FavoritesContactListVC: UIViewController {
     
     // MARK: - Setup
     
+    func reloadTable() {
+        model = TestContactsModel.createModel()
+        configureView()
+        filterForFavouriteContact()
+        contactsView?.tableView.reloadData()
+    }
+    
     private func configureView() {
         contactsView?.tableView.delegate = self
         contactsView?.tableView.dataSource = self
@@ -54,6 +61,7 @@ class FavoritesContactListVC: UIViewController {
     // MARK: - Private functions
     
     private func filterForFavouriteContact() {
+        filteredModel = [Contact]()
         for contact in model {
             if contact.isElected {
                 filteredModel.append(contact)
@@ -68,7 +76,7 @@ extension FavoritesContactListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        filteredModel.count
+        return filteredModel.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -84,9 +92,20 @@ extension FavoritesContactListVC: UITableViewDataSource {
 
 extension FavoritesContactListVC: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let contact = filteredModel[indexPath.row]
+        let controller = CallVC(contact: contact)
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         let contact = filteredModel[indexPath.row]
         let controller = DetailContactVC(contact: contact)
+        
         navigationController?.pushViewController(controller, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
