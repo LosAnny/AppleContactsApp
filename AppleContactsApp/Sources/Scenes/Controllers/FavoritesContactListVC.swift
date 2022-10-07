@@ -37,13 +37,6 @@ class FavoritesContactListVC: UIViewController {
     
     // MARK: - Setup
     
-    func reloadTable() {
-        model = TestContactsModel.createModel()
-        configureView()
-        filterForFavouriteContact()
-        contactsView?.tableView.reloadData()
-    }
-    
     private func configureView() {
         contactsView?.tableView.delegate = self
         contactsView?.tableView.dataSource = self
