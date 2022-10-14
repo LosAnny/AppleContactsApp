@@ -56,8 +56,6 @@ class TabBarController: UITabBarController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = UIImage(systemName: image)
-        navController.navigationBar.isTranslucent = true
-        navController.view.backgroundColor = .clear
         
         return navController
     }

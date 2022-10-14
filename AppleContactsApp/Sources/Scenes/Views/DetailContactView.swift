@@ -62,7 +62,7 @@ class DetailContactView: UIView {
                                                                secondText: " ")
     
     private lazy var secondaryStack = createVerticalStackView(spacing: 0,
-                                                              color: .white)
+                                                              color: .systemBackground)
     
     private lazy var buttonSendMessage = createButtonForActions(text: "Отправить сообщение",
                                                                 color: .systemBlue)
@@ -197,7 +197,7 @@ class DetailContactView: UIView {
         
         let button = UIButton(configuration: configuration, primaryAction: nil)
         button.contentMode = .scaleAspectFill
-        button.backgroundColor = .white
+        button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 10
         
         return button
@@ -216,11 +216,11 @@ class DetailContactView: UIView {
         configuration.attributedSubtitle = AttributedString(secondText, attributes: secondTextContainer)
         configuration.titlePadding = 5
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        configuration.baseBackgroundColor = .white
-        configuration.baseForegroundColor = .black
+        configuration.baseBackgroundColor = .systemBackground
+        configuration.baseForegroundColor = .label
         
         let button = UIButton(configuration: configuration, primaryAction: nil)
-        button.backgroundColor = .white
+        button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 10
         button.contentHorizontalAlignment = .leading
         
@@ -235,7 +235,7 @@ class DetailContactView: UIView {
         var configuration = UIButton.Configuration.filled()
         configuration.attributedTitle = AttributedString(text, attributes: container)
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        configuration.baseBackgroundColor = .white
+        configuration.baseBackgroundColor = .systemBackground
         
         let button = UIButton(configuration: configuration, primaryAction: nil)
         button.backgroundColor = .white
