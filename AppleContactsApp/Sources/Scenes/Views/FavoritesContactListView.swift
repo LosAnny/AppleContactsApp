@@ -14,7 +14,7 @@ class FavoritesContactListView: UIView {
     lazy var tableView: UITableView = {
         let tableView  = UITableView(frame: .zero, style: .plain)
         
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .systemBackground
         tableView.rowHeight = 60
         tableView.register(FavoritesContactTableViewCell.self, forCellReuseIdentifier: FavoritesContactTableViewCell.identifier)
         

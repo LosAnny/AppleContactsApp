@@ -45,6 +45,8 @@ class FavoritesContactListVC: UIViewController {
     private func setupNavigationController() {
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = .systemBackground
+        navigationController?.navigationBar.tintColor = .label
         navigationItem.title = "Избранные"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
