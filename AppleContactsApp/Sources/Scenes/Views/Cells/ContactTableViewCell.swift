@@ -17,8 +17,8 @@ class ContactTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .white
-        contentView.tintColor = .black
+        contentView.backgroundColor = .systemBackground
+        contentView.tintColor = .label
         selectionStyle = .none
     }
     

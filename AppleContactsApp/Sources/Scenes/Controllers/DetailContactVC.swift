@@ -40,6 +40,10 @@ class DetailContactVC: UIViewController {
 
         detailContactView?.setupView(with: contact)
         detailContactView?.addAnotherMainButtonTarget(self, action: #selector(openCallVC))
+        
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     // MARK: - Objc func

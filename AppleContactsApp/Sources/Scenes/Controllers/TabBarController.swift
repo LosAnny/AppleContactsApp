@@ -25,7 +25,7 @@ class TabBarController: UITabBarController {
         tabBar.isTranslucent = true
         tabBar.tintColor = .systemBlue
         tabBar.unselectedItemTintColor = .lightGray
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = .systemBackground
     }
     
     private func setupViewControllers() {

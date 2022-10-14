@@ -26,7 +26,7 @@ class DetailContactView: UIView {
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.font = UIFont.systemFont(ofSize: 24.0)
         label.numberOfLines = 1
         label.textAlignment = .center
@@ -44,25 +44,39 @@ class DetailContactView: UIView {
     
     private lazy var stackForMainButton = createHorizontalStackView(distribution: .fillEqually, spacing: 10)
     
-    private lazy var messageMainButton = createMainButton(imageName: "message.fill", text: "написать")
-    private lazy var anotherMainButton = createMainButton(imageName: "phone.fill", text: "другой")
-    private lazy var videoMainButton = createMainButton(imageName: "video.fill", text: "видео")
-    private lazy var envelopeMainButton = createMainButton(imageName: "envelope.fill", text: "почта")
+    private lazy var messageMainButton = createMainButton(imageName: "message.fill",
+                                                          text: "написать")
+    private lazy var anotherMainButton = createMainButton(imageName: "phone.fill",
+                                                          text: "другой")
+    private lazy var videoMainButton = createMainButton(imageName: "video.fill",
+                                                        text: "видео")
+    private lazy var envelopeMainButton = createMainButton(imageName: "envelope.fill",
+                                                           text: "почта")
     
-    private lazy var mainStack = createVerticalStackView(spacing: 10, color: nil)
+    private lazy var mainStack = createVerticalStackView(spacing: 10,
+                                                         color: nil)
     
-    private lazy var buttonForNumber = createButtonWithSubtitle(firstText: "другой", secondText: "8 ")
-    private lazy var buttonForNotes = createButtonWithSubtitle(firstText: "заметки", secondText: " ")
+    private lazy var buttonForNumber = createButtonWithSubtitle(firstText: "другой",
+                                                                secondText: "8 ")
+    private lazy var buttonForNotes = createButtonWithSubtitle(firstText: "заметки",
+                                                               secondText: " ")
     
-    private lazy var secondaryStack = createVerticalStackView(spacing: 0, color: .white)
+    private lazy var secondaryStack = createVerticalStackView(spacing: 0,
+                                                              color: .systemBackground)
     
-    private lazy var buttonSendMessage = createButtonForActions(text: "Отправить сообщение", color: .systemBlue)
-    private lazy var buttonShareContact = createButtonForActions(text: "Поделиться контактом", color: .systemBlue)
-    private lazy var buttonAddToFavorites = createButtonForActions(text: "Добавить в избранное", color: .systemBlue)
+    private lazy var buttonSendMessage = createButtonForActions(text: "Отправить сообщение",
+                                                                color: .systemBlue)
+    private lazy var buttonShareContact = createButtonForActions(text: "Поделиться контактом",
+                                                                 color: .systemBlue)
+    private lazy var buttonAddToFavorites = createButtonForActions(text: "Добавить в избранное",
+                                                                   color: .systemBlue)
     
-    private lazy var buttonContactForEmergency = createButtonForActions(text: "Добавить контакт на случай ЧП", color: .systemBlue)
-    private lazy var buttonGeolocation = createButtonForActions(text: "Поделиться геопозицией", color: .systemBlue)
-    private lazy var buttonBlocking = createButtonForActions(text: "Заблокировать абонента", color: .systemRed)
+    private lazy var buttonContactForEmergency = createButtonForActions(text: "Добавить контакт на случай ЧП",
+                                                                        color: .systemBlue)
+    private lazy var buttonGeolocation = createButtonForActions(text: "Поделиться геопозицией",
+                                                                color: .systemBlue)
+    private lazy var buttonBlocking = createButtonForActions(text: "Заблокировать абонента",
+                                                             color: .systemRed)
     
     // MARK: - Initial
         
@@ -183,7 +197,7 @@ class DetailContactView: UIView {
         
         let button = UIButton(configuration: configuration, primaryAction: nil)
         button.contentMode = .scaleAspectFill
-        button.backgroundColor = .white
+        button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 10
         
         return button
@@ -202,11 +216,11 @@ class DetailContactView: UIView {
         configuration.attributedSubtitle = AttributedString(secondText, attributes: secondTextContainer)
         configuration.titlePadding = 5
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        configuration.baseBackgroundColor = .white
-        configuration.baseForegroundColor = .black
+        configuration.baseBackgroundColor = .systemBackground
+        configuration.baseForegroundColor = .label
         
         let button = UIButton(configuration: configuration, primaryAction: nil)
-        button.backgroundColor = .white
+        button.backgroundColor = .systemBackground
         button.layer.cornerRadius = 10
         button.contentHorizontalAlignment = .leading
         
@@ -221,7 +235,7 @@ class DetailContactView: UIView {
         var configuration = UIButton.Configuration.filled()
         configuration.attributedTitle = AttributedString(text, attributes: container)
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        configuration.baseBackgroundColor = .white
+        configuration.baseBackgroundColor = .systemBackground
         
         let button = UIButton(configuration: configuration, primaryAction: nil)
         button.backgroundColor = .white

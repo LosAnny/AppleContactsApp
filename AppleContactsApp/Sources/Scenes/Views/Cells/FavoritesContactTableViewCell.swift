@@ -30,7 +30,7 @@ class FavoritesContactTableViewCell: UITableViewCell {
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .label
         label.font = UIFont.boldSystemFont(ofSize: 18.0)
         
         return label
@@ -41,8 +41,8 @@ class FavoritesContactTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.backgroundColor = .white
-        contentView.tintColor = .black
+        contentView.backgroundColor = .systemBackground
+        contentView.tintColor = .label
         selectionStyle = .none
         accessoryType = .detailButton
         
