@@ -14,7 +14,7 @@ class ContactListView: UIView {
     lazy var tableView: UITableView = {
         let tableView  = UITableView(frame: .zero, style: .plain)
         
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .systemBackground
         tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: ContactTableViewCell.identifier)
         
         return tableView

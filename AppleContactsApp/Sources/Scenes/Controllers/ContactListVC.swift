@@ -46,6 +46,7 @@ class ContactListVC: UIViewController {
     private func setupNavigationController() {
         
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = .systemBackground
         navigationItem.title = "Контакты"
         navigationItem.searchController = setupSearchController()
         navigationItem.hidesSearchBarWhenScrolling = false
